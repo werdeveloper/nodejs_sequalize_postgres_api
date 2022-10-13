@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "e9a57c67-e89f-408d-b8a2-bfdfdfd99ee9",
+		"name": "Node_Sequalize_Postgres",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18355842"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admin\",\r\n    \"email\":\"ukpscadmid@gmail.com\",\r\n    \"password\":123456,\r\n    \"confirm_password\":123456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user-registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user-registration"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admin\",\r\n    \"email\":\"ukpscadmin@gmail.com\",\r\n    \"password\":123456,\r\n    \"confirm_password\":123456\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user-registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user-registration"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsYXN0SW5zZXJ0SWQiOjEwLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6InVrcHNjYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjY1MDM5ODc3LCJleHAiOjE2NjUxMjYyNzd9.bX2CVqiP9PcMbpz1I8uC86GBJ5gJMwdp814VsW2Uvvc; Max-Age=86400; Path=/; Expires=Fri, 07 Oct 2022 07:04:37 GMT; HttpOnly"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "296"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"128-bFNyKy7iYSFE320g5ktZHWZaCdQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 07:04:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Registration Successful\",\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"admin\",\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsYXN0SW5zZXJ0SWQiOjEwLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6InVrcHNjYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjY1MDM5ODc3LCJleHAiOjE2NjUwMzk4OTJ9.Enuviu3TTWQqjq0SpHbvriSQiFxUyPpAEO5Anlpk5aU\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ukpscadmin@gmail.com\",\r\n    \"password\":123456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/v1/user-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"user-login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ukpscadmin@gmail.com\",\r\n    \"password\":123456\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/v1/user-login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"user-login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "294"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126-zu7JEVjH8BiqhSd99/0EhoNHl2Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 10:01:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": true,\n    \"msg\": \"Login Successful\",\n    \"data\": {\n        \"id\": 26,\n        \"name\": \"admin\",\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI2LCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6InVrcHNjYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjY1MDUwNTA2LCJleHAiOjE2NjUwNTIzMDZ9.J5x8ZmY0D-ADvR7vnAtwiP2m1UrzCPmFHeBP5LghwmU\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI2LCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6InVrcHNjYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjY1MDUwNTA2LCJleHAiOjE2NjUwNTIzMDZ9.J5x8ZmY0D-ADvR7vnAtwiP2m1UrzCPmFHeBP5LghwmU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5001/api/v1/user-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"user-list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI2LCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6InVrcHNjYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjY1MDUwNTA2LCJleHAiOjE2NjUwNTIzMDZ9.J5x8ZmY0D-ADvR7vnAtwiP2m1UrzCPmFHeBP5LghwmU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/user-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"user-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "170"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"aa-OVm1jfGJGQ6ks4JDnZkwUrzJAyE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 10:02:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 31,\n        \"name\": \"admin\",\n        \"email\": \"ukpscadmidn@gmail.com\"\n    },\n    {\n        \"id\": 36,\n        \"name\": \"admin\",\n        \"email\": \"ukpscadmid@gmail.com\"\n    },\n    {\n        \"id\": 26,\n        \"name\": \"admin\",\n        \"email\": \"ukpscadmin@gmail.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Form Master",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI2LCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6InVrcHNjYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjY1MDUzNjQ0LCJleHAiOjE2NjUwNTU0NDR9.fLJeXy3d72rVl1BwahRpwMfsY1upYPLtfr3Jc414W1A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"template\": \"template\",\r\n    \"step_id\": 1,\r\n    \"fields\": \"fields\",\r\n    \"rules\": \"rules\",\r\n    \"preference_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/v1/examination/form-master",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"examination",
+						"form-master"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Form Master",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI2LCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6InVrcHNjYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjY1MDUzNjQ0LCJleHAiOjE2NjUwNTU0NDR9.fLJeXy3d72rVl1BwahRpwMfsY1upYPLtfr3Jc414W1A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"template\": \"template\",\r\n    \"step_id\": 1,\r\n    \"fields\": \"fields\",\r\n    \"rules\": \"rules\",\r\n    \"preference_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/v1/examination/form-master",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"examination",
+								"form-master"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-IuIucV0b1OS6djGRZQCvm6xLpI8\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Oct 2022 11:05:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": false,\n    \"msg\": \"Form Details saved successfully.\"\n}"
+				}
+			]
+		}
+	]
+}
