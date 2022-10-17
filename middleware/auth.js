@@ -1,16 +1,31 @@
 const jwt = require("jsonwebtoken");
-const isAuthenticatedUser = (req,res,next)=>{
-    var token = req.headers['authorization'];
-    if(!token)
-        return res.status(401).send({msg: "",error:true,errormsg:{ 
-            "message": 'Please Login to access this resource'
-        }});
-    // if(token == null) next(new Error('Authentication Failed'));
-    var authorization = req.headers.authorization.split(' ')[1],
-        decoded;
-        decoded = jwt.verify(authorization, process.env.ACCESS_TOKEN_SECRET);
-    var userId = decoded.id;
-    next();
+const isAuthenticatedUser = (req, res, next) => {
+    //console.log(req.headers);
+    const bearerHeader = req.headers.authorization;    
+    if(typeof bearerHeader!=='undefined') {
+        const bearer = bearerHeader.split(' ');    
+        let token = bearer[1];
+        //console.log(token);
+        if(token === 'null'){
+            return res.status(401).send('Unauthorized Request');
+        }
+        else {
+            try {
+                let decode = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+                console.log(decode.userId, decode.email, decode.iat, decode.exp);
+            }  
+            catch(e){
+                //console.log(e);
+                if(e.name == 'JsonWebTokenError') {
+                    return res.status(401).send('Unauthorized Request'); 
+                }  
+            }
+            next();
+        }
+    } 
+    else {
+        return res.status(401).send('Unauthorized Request');
+    }
 };
 
 module.exports = isAuthenticatedUser;
